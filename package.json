@@ -1,0 +1,26 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "lib-flexible-demo",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-minify-css": "*",
+    "gulp-plumber": "*",
+    "gulp-postcss": "^6.1.1",
+    "gulp-pug": "^3.0.2",
+    "gulp-sass": "*",
+    "gulp-tinypng-compress": "^1.2.1",
+    "gulp-uglify": "*",
+    "postcss-px2rem": "^0.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ChenLiWen",
+  "private": true,
+  "license": "ISC"
+}
