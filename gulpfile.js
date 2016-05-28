@@ -24,7 +24,7 @@ gulp.task('css', function() {
                 cascade: true, //是否美化属性值 默认：true
                 remove: true //是否去掉不必要的前缀 默认：true
             }),
-            px2rem({ remUnit: 64 })
+            px2rem({ remUnit: 75 })
         ]))
         .pipe(minifyCss())
         .pipe(gulp.dest('dist/css'));
@@ -59,7 +59,7 @@ gulp.task('images', function() {
 gulp.task('tinypng', function() {
     gulp.src('src/images/*.{png,jpg,jpeg}')
         .pipe(tinypng({
-            key: 'apikey',
+            key: 'apikey',//tinypng压缩apikey
             sigFile: 'images/.tinypng-sigs',
             log: true
         }))
