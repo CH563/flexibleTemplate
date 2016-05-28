@@ -33,7 +33,7 @@ gulp.task('css', function() {
 
 // pug任务
 gulp.task('pug', function() {
-    gulp.src('src/pug/*.pug')
+    gulp.src('src/*.pug')
         // .pipe(plumber())
         .pipe(pug({ pretty: true }))
         .pipe(gulp.dest('dist'));
@@ -86,7 +86,7 @@ gulp.task('watch', function() {
 
 
     // 预处理
-    gulp.watch('src/pug/**', ['pug']);
+    gulp.watch('src/**', ['pug']);
     gulp.watch('src/js/**', ['js']);
     gulp.watch('src/sass/**', ['css']);
     gulp.watch('src/images/**', ['images']);
