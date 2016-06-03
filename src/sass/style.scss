@@ -1,99 +1,108 @@
 @import 'import/public.scss';
+body {
+    background: #ee0a3b;
+}
 
-body{
-	background:#ee0a3b;
+header {
+    text-align: center;
+    img {
+        width: 750px;
+    }
 }
-header{
-	text-align: center;
-	img{
-		width:750px;
+
+.container {
+    padding: 10px;
+    .item {
+        overflow: hidden;
+        display: flex;
+        padding: 15px 0;
+        background: #fff;
+        margin-bottom: 1px;/*no*/
+        &.line {
+            background-image: linear-gradient(#000 50%, transparent 50%);
+            background-size: 100% 1px;/*no*/
+ 	   background-repeat: no-repeat;
+ 	   background-position: bottom;
+           margin-bottom: 0;
 	}
+    }
 }
-.container{
-	padding: 10px;
-	.item{
-		overflow: hidden;
-		display: flex;
-		padding:15px 0;
-		background:#fff;
-		margin-bottom: 1px;/*no*/
-	}
+
+.pro-img {
+    display: block;
+    width: 176px;
+    height: 176px;
+    line-height: 0;
+    img {
+        width: 100%;
+    }
 }
-.pro-img{
-	display: block;
-	width:176px;
-	height: 176px;
-	line-height: 0;
-	img{
-		width:100%;
-	}
+
+.content {
+    flex: 1;
+    padding: 0 19px 0 16px;
+    height: 176px;
+    position: relative;
+    h3 {
+        font-size: 28px;/*px*/
+        line-height: 32px;/*px*/
+        height: 64px;/*px*/
+        overflow: hidden;
+        margin-bottom: 5px;
+    }
+    p {
+        font-size: 24px;/*px*/
+        line-height: 26px;/*px*/
+        color: #ff6a30;
+    }
 }
-.content{
-	flex:1;
-	padding:0 19px 0 16px;
-	height: 176px;
-	position: relative;
-	h3{
-		font-size:28px;/*px*/
-		line-height: 32px;/*px*/
-		height: 64px;/*px*/
-		overflow: hidden;
-		margin-bottom: 5px;
-	}
-	p{
-		font-size: 24px;/*px*/
-		line-height: 26px;/*px*/
-		color: #ff6a30;
-	}
+
+.flag-price {
+    margin-bottom: 10px;
+    mark {
+        display: inline-block;
+        font-size: 24px;/*px*/
+        padding: 0 10px;
+        border-radius: 5px;
+        background: #ee0a3b;
+        color: #fff;
+        margin-right: 10px;
+    }
+    span {
+        margin-right: 8px;
+        color: #ee0a3b;
+        font-size: 24px;/*px*/
+        font-weight: bold;
+    }
+    em {
+        font-style: normal;
+        color: #ee0a3b;
+        font-size: 24px;/*px*/
+    }
 }
-.flag-price{
-	margin-bottom: 10px;
-	mark{
-		display: inline-block;
-		font-size: 24px;/*px*/
-		padding:0 10px;
-		border-radius: 5px;
-		background:#ee0a3b;
-		color: #fff;
-		margin-right: 10px;
-	}
-	span{
-		margin-right: 8px;
-		color:#ee0a3b;
-		font-size: 24px;/*px*/
-		font-weight: bold;
-	}
-	em{
-		font-style: normal;
-		color: #ee0a3b;
-		font-size: 24px;/*px*/
-	}
+
+.buy {
+    display: block;
+    position: absolute;
+    right: 19px;
+    bottom: 0;
+    color: #fff;
+    background: #ee0a3b;
+    font-size: 28px;/*px*/
+    padding: 0 30px;
+    line-height: 44px;/*px*/
+    text-decoration: none;
+    &:active {
+        text-decoration: none;
+        background: red;
+    }
 }
-.buy{
-	display: block;
-	position: absolute;
-	right:19px;
-	bottom:0;
-	color: #fff;
-	background:#ee0a3b;
-	font-size: 28px;/*px*/
-	padding:0 30px;
-	line-height: 44px;/*px*/
-	text-decoration: none;
-	&:active{
-		text-decoration: none;
-		background:red;
-	}
-}
-.ewm{
-	padding:40px;
-	text-align: center;
-	img{
-		width:186px;
-		height: 186px;
-	}
-}
-.aa{
-	width:750px;
-	display: flex;
+
+.ewm {
+    padding: 40px;
+    text-align: center;
+    img {
+        width: 186px;
+        height: 186px;
+    }
 }

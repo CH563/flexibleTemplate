@@ -50,17 +50,13 @@ gulp.task('js', function() {
 
 // 复制图片
 gulp.task('images', function() {
-    gulp.src('src/images/**')
+    gulp.src('src/images/**/*.{gif,svg,ico,bmp}')
         .pipe(gulp.dest('dist/images'));
-});
 
-
-// 压缩图片，避免上传慢，完成后单独运行gulp tinypng
-gulp.task('tinypng', function() {
-    gulp.src('src/images/*.{png,jpg,jpeg}')
+    gulp.src('src/images/**/*.{png,jpg,jpeg}')
         .pipe(tinypng({
-            key: 'apikey',
-            sigFile: 'images/.tinypng-sigs',
+            key: '1zutRX0epvR0ni7FDpGcrO1FMcD3dKO-',
+            sigFile: 'dist/images/.tinypng-sigs',
             log: true
         }))
         .pipe(gulp.dest('dist/images'));
