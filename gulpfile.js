@@ -24,7 +24,7 @@ gulp.task('css', function() {
                 cascade: true, //是否美化属性值 默认：true
                 remove: true //是否去掉不必要的前缀 默认：true
             }),
-            px2rem({ remUnit: 64 })
+            px2rem({ remUnit: 75 })
         ]))
         .pipe(minifyCss())
         .pipe(gulp.dest('dist/css'));
@@ -33,7 +33,7 @@ gulp.task('css', function() {
 
 // pug任务
 gulp.task('pug', function() {
-    gulp.src('src/pug/*.pug')
+    gulp.src('src/*.pug')
         // .pipe(plumber())
         .pipe(pug({ pretty: true }))
         .pipe(gulp.dest('dist'));
@@ -55,14 +55,12 @@ gulp.task('images', function() {
 
     gulp.src('src/images/**/*.{png,jpg,jpeg}')
         .pipe(tinypng({
-            key: '1zutRX0epvR0ni7FDpGcrO1FMcD3dKO-',
+            key: 'apikey',
             sigFile: 'dist/images/.tinypng-sigs',
             log: true
         }))
         .pipe(gulp.dest('dist/images'));
 });
-
-
 
 // 编译所有
 gulp.task('todist', ['pug', 'js', 'css', 'images']);
@@ -82,7 +80,7 @@ gulp.task('watch', function() {
 
 
     // 预处理
-    gulp.watch('src/pug/**', ['pug']);
+    gulp.watch('src/**', ['pug']);
     gulp.watch('src/js/**', ['js']);
     gulp.watch('src/sass/**', ['css']);
     gulp.watch('src/images/**', ['images']);
